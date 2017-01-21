@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "test-watch": "jest --watch",
+    "test:watch": "jest --watch",
     "prod": "NODE_ENV=production webpack",
     "dev": "NODE_ENV=development webpack-dev-server --content-base public --inline --hot --port 3000"
   },
