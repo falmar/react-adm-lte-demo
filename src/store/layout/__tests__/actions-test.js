@@ -7,11 +7,19 @@ jest.unmock('./../actions')
 import actions from './../actions'
 
 describe('Store.Layout.Actions', () => {
-  it(`must have type: LAYOUT_TOGGLE`, () => {
+  it(`must have type: LAYOUT_COLLAPSE_TOGGLE`, () => {
     const action = {type: 'LAYOUT_COLLAPSE_TOGGLE'}
 
     expect(
-      actions.toggle()
+      actions.collapse()
+    ).toEqual(action)
+  })
+
+  it(`must have type: LAYOUT_SIDEBAR_MINI_TOGGLE`, () => {
+    const action = {type: 'LAYOUT_SIDEBAR_MINI_TOGGLE'}
+
+    expect(
+      actions.sidebarMini()
     ).toEqual(action)
   })
 })

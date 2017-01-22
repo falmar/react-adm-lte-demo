@@ -3,5 +3,6 @@
 // License that can be found in the LICENSE file.
 
 export default {
-  TOGGLE: 'LAYOUT_COLLAPSE_TOGGLE'
+  COLLAPSE: 'LAYOUT_COLLAPSE_TOGGLE',
+  SIDEBAR_MINI: 'LAYOUT_SIDEBAR_MINI_TOGGLE'
 }

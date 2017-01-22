@@ -4,10 +4,15 @@
 
 import constants from './constants'
 
-const toggle = () => ({
-  type: constants.TOGGLE
+const collapse = () => ({
+  type: constants.COLLAPSE
+})
+
+const sidebarMini = () => ({
+  type: constants.SIDEBAR_MINI
 })
 
 export default {
-  toggle
+  collapse,
+  sidebarMini
 }

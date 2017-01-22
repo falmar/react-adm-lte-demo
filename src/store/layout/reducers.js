@@ -5,17 +5,23 @@
 import constants from './constants'
 
 const initialState = {
-  collapsed: false
+  collapsed: false,
+  sidebarMini: false
 }
 
 export {initialState}
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case constants.TOGGLE:
+    case constants.COLLAPSE:
       return {
         ...state,
         collapsed: !state.collapsed
+      }
+    case constants.SIDEBAR_MINI:
+      return {
+        ...state,
+        sidebarMini: !state.sidebarMini
       }
     default:
       return state

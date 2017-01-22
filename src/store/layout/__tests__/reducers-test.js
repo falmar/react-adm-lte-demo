@@ -7,7 +7,8 @@ jest.unmock('./../reducers')
 import reducer from './../reducers'
 
 const initState = {
-  collapsed: false
+  collapsed: false,
+  sidebarMini: false
 }
 
 describe('Store.Layout.Reducers', () => {
@@ -17,10 +18,27 @@ describe('Store.Layout.Reducers', () => {
     ).toEqual(initState)
   })
 
-  it(`should toggle collapsed property to true`, () => {
+  it(`should toggle collapse property to false`, () => {
     const action = {type: 'LAYOUT_COLLAPSE_TOGGLE'}
     const state = {
-      ...initState
+      ...initState,
+      collapsed: true
+    }
+    const expectedState = {
+      ...initState,
+      collapsed: false
+    }
+
+    expect(
+      reducer(state, action)
+    ).toEqual(expectedState)
+  })
+
+  it(`should toggle collapse property to true`, () => {
+    const action = {type: 'LAYOUT_COLLAPSE_TOGGLE'}
+    const state = {
+      ...initState,
+      collapsed: false
     }
     const expectedState = {
       ...initState,
@@ -32,15 +50,31 @@ describe('Store.Layout.Reducers', () => {
     ).toEqual(expectedState)
   })
 
-  it(`should toggle collapsed property to false`, () => {
-    const action = {type: 'LAYOUT_COLLAPSE_TOGGLE'}
+  it(`should toggle sidebarMini property to false`, () => {
+    const action = {type: 'LAYOUT_SIDEBAR_MINI_TOGGLE'}
     const state = {
       ...initState,
-      collapsed: true
+      sidebarMini: true
     }
     const expectedState = {
       ...initState,
-      collapsed: false
+      sidebarMini: false
+    }
+
+    expect(
+      reducer(state, action)
+    ).toEqual(expectedState)
+  })
+
+  it(`should toggle collapse property to true`, () => {
+    const action = {type: 'LAYOUT_SIDEBAR_MINI_TOGGLE'}
+    const state = {
+      ...initState,
+      sidebarMini: false
+    }
+    const expectedState = {
+      ...initState,
+      sidebarMini: true
     }
 
     expect(
