@@ -12,7 +12,22 @@ const sidebarMini = () => ({
   type: constants.SIDEBAR_MINI
 })
 
+const boxed = () => ({
+  type: constants.BOXED
+})
+
+const fixed = () => ({
+  type: constants.FIXED
+})
+
+const topNavbar = () => ({
+  type: constants.TOP_NAVBAR
+})
+
 export default {
   collapse,
-  sidebarMini
+  sidebarMini,
+  boxed,
+  fixed,
+  topNavbar
 }

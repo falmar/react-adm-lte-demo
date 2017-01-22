@@ -22,4 +22,28 @@ describe('Store.Layout.Actions', () => {
       actions.sidebarMini()
     ).toEqual(action)
   })
+
+  it(`must have type: LAYOUT_BOXED_TOGGLE`, () => {
+    const action = {type: 'LAYOUT_BOXED_TOGGLE'}
+
+    expect(
+      actions.boxed()
+    ).toEqual(action)
+  })
+
+  it(`must have type: LAYOUT_FIXED_TOGGLE`, () => {
+    const action = {type: 'LAYOUT_FIXED_TOGGLE'}
+
+    expect(
+      actions.fixed()
+    ).toEqual(action)
+  })
+
+  it(`must have type: LAYOUT_TOP_NAVBAR_TOGGLE`, () => {
+    const action = {type: 'LAYOUT_TOP_NAVBAR_TOGGLE'}
+
+    expect(
+      actions.topNavbar()
+    ).toEqual(action)
+  })
 })
