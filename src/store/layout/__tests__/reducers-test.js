@@ -4,11 +4,14 @@
 
 jest.unmock('./../reducers')
 
-import reducer from './../reducers'
+import reducer, {initialState} from './../reducers'
 
 const initState = {
   collapsed: false,
-  sidebarMini: false
+  sidebarMini: false,
+  boxed: false,
+  fixed: false,
+  topNavbar: false
 }
 
 describe('Store.Layout.Reducers', () => {
@@ -21,11 +24,11 @@ describe('Store.Layout.Reducers', () => {
   it(`should toggle collapse property to false`, () => {
     const action = {type: 'LAYOUT_COLLAPSE_TOGGLE'}
     const state = {
-      ...initState,
+      ...initialState,
       collapsed: true
     }
     const expectedState = {
-      ...initState,
+      ...initialState,
       collapsed: false
     }
 
@@ -37,11 +40,10 @@ describe('Store.Layout.Reducers', () => {
   it(`should toggle collapse property to true`, () => {
     const action = {type: 'LAYOUT_COLLAPSE_TOGGLE'}
     const state = {
-      ...initState,
-      collapsed: false
+      ...initialState
     }
     const expectedState = {
-      ...initState,
+      ...initialState,
       collapsed: true
     }
 
@@ -53,11 +55,11 @@ describe('Store.Layout.Reducers', () => {
   it(`should toggle sidebarMini property to false`, () => {
     const action = {type: 'LAYOUT_SIDEBAR_MINI_TOGGLE'}
     const state = {
-      ...initState,
+      ...initialState,
       sidebarMini: true
     }
     const expectedState = {
-      ...initState,
+      ...initialState,
       sidebarMini: false
     }
 
@@ -66,15 +68,107 @@ describe('Store.Layout.Reducers', () => {
     ).toEqual(expectedState)
   })
 
-  it(`should toggle collapse property to true`, () => {
+  it(`should toggle sidebarMini property to true`, () => {
     const action = {type: 'LAYOUT_SIDEBAR_MINI_TOGGLE'}
     const state = {
-      ...initState,
-      sidebarMini: false
+      ...initialState
     }
     const expectedState = {
-      ...initState,
+      ...initialState,
       sidebarMini: true
+    }
+
+    expect(
+      reducer(state, action)
+    ).toEqual(expectedState)
+  })
+
+  it(`should toggle boxed property to false`, () => {
+    const action = {type: 'LAYOUT_BOXED_TOGGLE'}
+    const state = {
+      ...initialState,
+      boxed: true
+    }
+    const expectedState = {
+      ...initialState,
+      boxed: false
+    }
+
+    expect(
+      reducer(state, action)
+    ).toEqual(expectedState)
+  })
+
+  it(`should toggle boxed property to true`, () => {
+    const action = {type: 'LAYOUT_BOXED_TOGGLE'}
+    const state = {
+      ...initialState
+    }
+    const expectedState = {
+      ...initialState,
+      boxed: true
+    }
+
+    expect(
+      reducer(state, action)
+    ).toEqual(expectedState)
+  })
+
+  it(`should toggle fixed property to false`, () => {
+    const action = {type: 'LAYOUT_FIXED_TOGGLE'}
+    const state = {
+      ...initialState,
+      fixed: true
+    }
+    const expectedState = {
+      ...initialState,
+      fixed: false
+    }
+
+    expect(
+      reducer(state, action)
+    ).toEqual(expectedState)
+  })
+
+  it(`should toggle fixed property to true`, () => {
+    const action = {type: 'LAYOUT_FIXED_TOGGLE'}
+    const state = {
+      ...initialState
+    }
+    const expectedState = {
+      ...initialState,
+      fixed: true
+    }
+
+    expect(
+      reducer(state, action)
+    ).toEqual(expectedState)
+  })
+
+  it(`should toggle topNavbar property to false`, () => {
+    const action = {type: 'LAYOUT_TOP_NAVBAR_TOGGLE'}
+    const state = {
+      ...initialState,
+      topNavbar: true
+    }
+    const expectedState = {
+      ...initialState,
+      topNavbar: false
+    }
+
+    expect(
+      reducer(state, action)
+    ).toEqual(expectedState)
+  })
+
+  it(`should toggle topNavbar property to true`, () => {
+    const action = {type: 'LAYOUT_TOP_NAVBAR_TOGGLE'}
+    const state = {
+      ...initialState
+    }
+    const expectedState = {
+      ...initialState,
+      topNavbar: true
     }
 
     expect(

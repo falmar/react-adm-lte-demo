@@ -6,7 +6,10 @@ import constants from './constants'
 
 const initialState = {
   collapsed: false,
-  sidebarMini: false
+  sidebarMini: false,
+  boxed: false,
+  fixed: false,
+  topNavbar: false
 }
 
 export {initialState}
@@ -22,6 +25,21 @@ export default (state = initialState, action) => {
       return {
         ...state,
         sidebarMini: !state.sidebarMini
+      }
+    case constants.BOXED:
+      return {
+        ...state,
+        boxed: !state.boxed
+      }
+    case constants.FIXED:
+      return {
+        ...state,
+        fixed: !state.fixed
+      }
+    case constants.TOP_NAVBAR:
+      return {
+        ...state,
+        topNavbar: !state.topNavbar
       }
     default:
       return state
