@@ -4,23 +4,27 @@
 
 jest.unmock('./../reducers')
 
-import reducer, {initialState} from './../reducers'
+import reducer from './../reducers'
+
+const initState = {
+  collapsed: false
+}
 
 describe('Store.Layout.Reducers', () => {
   it(`should return initialState`, () => {
     expect(
       reducer(undefined, {type: undefined})
-    ).toEqual(initialState)
+    ).toEqual(initState)
   })
 
-  it(`should toggle open property to true`, () => {
-    const action = {type: 'LAYOUT_TOGGLE'}
+  it(`should toggle collapsed property to true`, () => {
+    const action = {type: 'LAYOUT_COLLAPSE_TOGGLE'}
     const state = {
-      ...initialState
+      ...initState
     }
     const expectedState = {
-      ...initialState,
-      open: true
+      ...initState,
+      collapsed: true
     }
 
     expect(
@@ -28,15 +32,15 @@ describe('Store.Layout.Reducers', () => {
     ).toEqual(expectedState)
   })
 
-  it(`should toggle open property to false`, () => {
-    const action = {type: 'LAYOUT_TOGGLE'}
+  it(`should toggle collapsed property to false`, () => {
+    const action = {type: 'LAYOUT_COLLAPSE_TOGGLE'}
     const state = {
-      ...initialState,
-      open: true
+      ...initState,
+      collapsed: true
     }
     const expectedState = {
-      ...initialState,
-      open: false
+      ...initState,
+      collapsed: false
     }
 
     expect(

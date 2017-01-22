@@ -5,7 +5,7 @@
 import constants from './constants'
 
 const initialState = {
-  open: false
+  collapsed: false
 }
 
 export {initialState}
@@ -15,7 +15,7 @@ export default (state = initialState, action) => {
     case constants.TOGGLE:
       return {
         ...state,
-        open: !state.open
+        collapsed: !state.collapsed
       }
     default:
       return state

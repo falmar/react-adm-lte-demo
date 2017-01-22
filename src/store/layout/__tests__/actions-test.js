@@ -8,7 +8,7 @@ import actions from './../actions'
 
 describe('Store.Layout.Actions', () => {
   it(`must have type: LAYOUT_TOGGLE`, () => {
-    const action = {type: 'LAYOUT_TOGGLE'}
+    const action = {type: 'LAYOUT_COLLAPSE_TOGGLE'}
 
     expect(
       actions.toggle()

@@ -3,5 +3,5 @@
 // License that can be found in the LICENSE file.
 
 export default {
-  TOGGLE: 'LAYOUT_TOGGLE'
+  TOGGLE: 'LAYOUT_COLLAPSE_TOGGLE'
 }
