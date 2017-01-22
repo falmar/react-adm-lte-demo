@@ -41,13 +41,17 @@ describe('Store.Layout.Reducers', () => {
 
     it(`should toggle collapse property to true`, () => {
       const action = {type: 'LAYOUT_COLLAPSE_TOGGLE'}
+      const state = {
+        ...initialState,
+        collapsed: false
+      }
       const expectedState = {
         ...initialState,
         collapsed: true
       }
 
       expect(
-        reducer(initialState, action)
+        reducer(state, action)
       ).toEqual(expectedState)
     })
   })
@@ -72,13 +76,17 @@ describe('Store.Layout.Reducers', () => {
 
     it(`should toggle sidebarMini property to true`, () => {
       const action = {type: 'LAYOUT_SIDEBAR_MINI_TOGGLE'}
+      const state = {
+        ...initialState,
+        sidebarMini: false
+      }
       const expectedState = {
         ...initialState,
         sidebarMini: true
       }
 
       expect(
-        reducer(initialState, action)
+        reducer(state, action)
       ).toEqual(expectedState)
     })
   })
@@ -103,13 +111,17 @@ describe('Store.Layout.Reducers', () => {
 
     it(`should toggle boxed property to true`, () => {
       const action = {type: 'LAYOUT_BOXED_TOGGLE'}
+      const state = {
+        ...initialState,
+        boxed: false
+      }
       const expectedState = {
         ...initialState,
         boxed: true
       }
 
       expect(
-        reducer(initialState, action)
+        reducer(state, action)
       ).toEqual(expectedState)
     })
   })
@@ -134,13 +146,17 @@ describe('Store.Layout.Reducers', () => {
 
     it(`should toggle fixed property to true`, () => {
       const action = {type: 'LAYOUT_FIXED_TOGGLE'}
+      const state = {
+        ...initialState,
+        fixed: false
+      }
       const expectedState = {
         ...initialState,
         fixed: true
       }
 
       expect(
-        reducer(initialState, action)
+        reducer(state, action)
       ).toEqual(expectedState)
     })
   })
@@ -165,13 +181,17 @@ describe('Store.Layout.Reducers', () => {
 
     it(`should toggle topNavbar property to true`, () => {
       const action = {type: 'LAYOUT_TOP_NAVBAR_TOGGLE'}
+      const state = {
+        ...initialState,
+        topNavbar: false
+      }
       const expectedState = {
         ...initialState,
         topNavbar: true
       }
 
       expect(
-        reducer(initialState, action)
+        reducer(state, action)
       ).toEqual(expectedState)
     })
   })
@@ -184,13 +204,17 @@ describe('Store.Layout.Reducers', () => {
           skin: 'skin-red'
         }
       }
+      const state = {
+        ...initialState,
+        skin: 'skin-blue'
+      }
       const expectedState = {
         ...initialState,
         skin: 'skin-red'
       }
 
       expect(
-        reducer(initialState, action)
+        reducer(state, action)
       ).toEqual(expectedState)
     })
   })
