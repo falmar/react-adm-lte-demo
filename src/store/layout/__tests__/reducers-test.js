@@ -8,7 +8,7 @@ import reducer, {initialState} from './../reducers'
 
 const initState = {
   collapsed: false,
-  sidebarMini: false,
+  sidebarMini: true,
   boxed: false,
   fixed: false,
   topNavbar: false,

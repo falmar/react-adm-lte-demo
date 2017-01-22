@@ -6,7 +6,7 @@ import constants from './constants'
 
 const initialState = {
   collapsed: false,
-  sidebarMini: false,
+  sidebarMini: true,
   boxed: false,
   fixed: false,
   topNavbar: false,
