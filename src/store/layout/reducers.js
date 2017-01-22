@@ -9,7 +9,8 @@ const initialState = {
   sidebarMini: false,
   boxed: false,
   fixed: false,
-  topNavbar: false
+  topNavbar: false,
+  skin: 'skin-blue'
 }
 
 export {initialState}
@@ -40,6 +41,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         topNavbar: !state.topNavbar
+      }
+    case constants.CHANGE_SKIN:
+      return {
+        ...state,
+        skin: action.payload.skin
       }
     default:
       return state

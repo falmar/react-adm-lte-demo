@@ -24,10 +24,18 @@ const topNavbar = () => ({
   type: constants.TOP_NAVBAR
 })
 
+const changeSkin = skin => ({
+  type: constants.CHANGE_SKIN,
+  payload: {
+    skin
+  }
+})
+
 export default {
   collapse,
   sidebarMini,
   boxed,
   fixed,
-  topNavbar
+  topNavbar,
+  changeSkin
 }

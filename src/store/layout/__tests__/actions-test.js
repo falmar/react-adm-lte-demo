@@ -46,4 +46,33 @@ describe('Store.Layout.Actions', () => {
       actions.topNavbar()
     ).toEqual(action)
   })
+
+  describe('changeSkin', () => {
+    it(`should have type: LAYOUT_CHANGE_SKIN`, () => {
+      const {type} = actions.changeSkin()
+      const expectedType = 'LAYOUT_CHANGE_SKIN'
+
+      expect(
+        type
+      ).toEqual(expectedType)
+    })
+
+    it(`should have payload.skin: undefined`, () => {
+      const {payload} = actions.changeSkin()
+      const expectedPayload = {skin: undefined}
+
+      expect(
+        payload
+      ).toEqual(expectedPayload)
+    })
+
+    it(`should have payload.skin: skin-blue`, () => {
+      const {payload} = actions.changeSkin('skin-blue')
+      const expectedPayload = {skin: 'skin-blue'}
+
+      expect(
+        payload
+      ).toEqual(expectedPayload)
+    })
+  })
 })
