@@ -7,7 +7,7 @@ import {connect} from 'react-redux'
 
 import {Layout} from 'react-adm-lte/dist/react-adm-lte.min'
 
-import MainHeader from './MainHeader'
+import MainHeader from './MainHeader/MainHeader'
 
 const MyLayout = (props) => {
   return (

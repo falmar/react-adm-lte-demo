@@ -6,7 +6,10 @@ import React from 'react'
 
 import {MainHeaderComponents} from 'react-adm-lte'
 
+import SidebarToggle from './SidebarToggle'
+
 const {MainHeader, Logo, LogoText} = MainHeaderComponents
+const {Navbar} = MainHeaderComponents
 
 const MySidebar = () => {
   return (
@@ -15,6 +18,9 @@ const MySidebar = () => {
         <LogoText isLarge boldTitle='React' title='AdminLTE' />
         <LogoText isMini boldTitle='R' title='LTE' />
       </Logo>
+      <Navbar>
+        <SidebarToggle />
+      </Navbar>
     </MainHeader>
   )
 }
