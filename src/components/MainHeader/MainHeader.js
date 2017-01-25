@@ -7,6 +7,7 @@ import React from 'react'
 import {MainHeaderComponents} from 'react-adm-lte'
 
 import SidebarToggle from './SidebarToggle'
+import ControlSidebarToggle from './ControlSidebarToggle'
 import Messages from './Messages'
 import Notifications from './Notifications'
 import Tasks from './Tasks'
@@ -27,6 +28,7 @@ const MySidebar = () => {
           <Messages />
           <Notifications />
           <Tasks />
+          <ControlSidebarToggle />
         </Menu>
       </Navbar>
     </MainHeader>
