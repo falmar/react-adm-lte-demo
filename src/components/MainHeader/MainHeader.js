@@ -7,9 +7,12 @@ import React from 'react'
 import {MainHeaderComponents} from 'react-adm-lte'
 
 import SidebarToggle from './SidebarToggle'
+import Messages from './Messages'
+import Notifications from './Notifications'
+import Tasks from './Tasks'
 
 const {MainHeader, Logo, LogoText} = MainHeaderComponents
-const {Navbar} = MainHeaderComponents
+const {Navbar, Menu} = MainHeaderComponents
 
 const MySidebar = () => {
   return (
@@ -20,6 +23,11 @@ const MySidebar = () => {
       </Logo>
       <Navbar>
         <SidebarToggle />
+        <Menu>
+          <Messages />
+          <Notifications />
+          <Tasks />
+        </Menu>
       </Navbar>
     </MainHeader>
   )

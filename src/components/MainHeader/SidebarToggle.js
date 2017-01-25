@@ -3,12 +3,11 @@
 // License that can be found in the LICENSE file.
 
 import {connect} from 'react-redux'
-
 import {MainHeaderComponents} from 'react-adm-lte'
 
-const {SidebarToggle} = MainHeaderComponents
-
 import layoutActions from './../../store/layout/actions'
+
+const {SidebarToggle} = MainHeaderComponents
 
 const mapDispatchToProps = dispatch => ({
   onToggle: () => dispatch(layoutActions.collapse())
