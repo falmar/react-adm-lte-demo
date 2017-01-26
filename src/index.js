@@ -9,6 +9,7 @@ import {Provider} from 'react-redux'
 import 'admin-lte/bootstrap/css/bootstrap.min.css'
 import 'admin-lte/dist/css/AdminLTE.min.css'
 import 'admin-lte/dist/css/skins/skin-blue.min.css'
+import './css/app.css'
 
 import store from './store/store'
 

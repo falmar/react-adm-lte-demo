@@ -7,9 +7,11 @@ import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 
 import layout from './layout/reducers'
+import mainHeader from './mainHeader/reducers'
 
 const reducers = combineReducers({
-  layout
+  layout,
+  mainHeader
 })
 
 const store = createStore(reducers,
