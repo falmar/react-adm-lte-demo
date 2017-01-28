@@ -11,6 +11,7 @@ import ControlSidebarToggle from './ControlSidebarToggle'
 import Messages from './Messages'
 import Notifications from './Notifications'
 import Tasks from './Tasks'
+import User from './User'
 
 const {MainHeader, Logo, LogoText} = MainHeaderComponents
 const {Navbar, Menu} = MainHeaderComponents
@@ -28,6 +29,7 @@ const MySidebar = () => {
           <Messages />
           <Notifications />
           <Tasks />
+          <User />
           <ControlSidebarToggle />
         </Menu>
       </Navbar>
