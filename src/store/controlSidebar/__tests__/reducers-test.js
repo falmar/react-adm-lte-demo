@@ -10,7 +10,7 @@ const initState = {
   open: false
 }
 
-describe('Store.Layout.Reducers', () => {
+describe('Store.ControlSidebar.Reducers', () => {
   it(`should return initialState`, () => {
     expect(
       reducer(undefined, {type: undefined})
