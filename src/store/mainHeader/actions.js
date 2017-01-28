@@ -25,8 +25,16 @@ const toggleTasks = open => ({
   }
 })
 
+const toggleUser = open => ({
+  type: constants.MAINHEADER_USER_TOGGLE,
+  payload: {
+    open
+  }
+})
+
 export default {
   toggleMessages,
   toggleNotifications,
-  toggleTasks
+  toggleTasks,
+  toggleUser
 }

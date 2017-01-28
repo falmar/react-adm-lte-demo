@@ -13,6 +13,9 @@ const initialState = {
   },
   tasks: {
     open: false
+  },
+  user: {
+    open: false
   }
 }
 
@@ -41,6 +44,14 @@ export default (state = initialState, action) => {
         ...state,
         tasks: {
           ...state.tasks,
+          open: action.payload.open
+        }
+      }
+    case constants.MAINHEADER_USER_TOGGLE:
+      return {
+        ...state,
+        user: {
+          ...state.user,
           open: action.payload.open
         }
       }

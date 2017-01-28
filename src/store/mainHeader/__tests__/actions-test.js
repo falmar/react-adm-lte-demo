@@ -90,4 +90,32 @@ describe('Store.MainHeader.Actions', () => {
       ).toEqual(expectedAction)
     })
   })
+
+  describe('User', () => {
+    it('should have type MAINHEADER_USER_TOGGLE and payload.open false', () => {
+      const expectedAction = {
+        type: 'MAINHEADER_USER_TOGGLE',
+        payload: {
+          open: false
+        }
+      }
+
+      expect(
+        actions.toggleUser(false)
+      ).toEqual(expectedAction)
+    })
+
+    it('should have type MAINHEADER_USER_TOGGLE and payload.open true', () => {
+      const expectedAction = {
+        type: 'MAINHEADER_USER_TOGGLE',
+        payload: {
+          open: true
+        }
+      }
+
+      expect(
+        actions.toggleUser(true)
+      ).toEqual(expectedAction)
+    })
+  })
 })

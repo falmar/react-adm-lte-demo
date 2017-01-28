@@ -15,6 +15,9 @@ const initState = {
   },
   tasks: {
     open: false
+  },
+  user: {
+    open: false
   }
 }
 
@@ -153,6 +156,52 @@ describe('Store.MainHeader.Reducers', () => {
         ...initialState,
         tasks: {
           ...initialState.tasks,
+          open: false
+        }
+      }
+
+      expect(
+        reducer(state, action)
+      ).toEqual(expectedState)
+    })
+  })
+
+  describe('Tasks', () => {
+    it('should toggle open property to true', () => {
+      const action = {type: 'MAINHEADER_USER_TOGGLE', payload: {open: true}}
+      const state = {
+        ...initialState,
+        user: {
+          ...initialState.user,
+          open: false
+        }
+      }
+      const expectedState = {
+        ...initialState,
+        user: {
+          ...initialState.user,
+          open: true
+        }
+      }
+
+      expect(
+        reducer(state, action)
+      ).toEqual(expectedState)
+    })
+
+    it('should toggle open property to false', () => {
+      const action = {type: 'MAINHEADER_USER_TOGGLE', payload: {open: false}}
+      const state = {
+        ...initialState,
+        user: {
+          ...initialState.user,
+          open: true
+        }
+      }
+      const expectedState = {
+        ...initialState,
+        user: {
+          ...initialState.user,
           open: false
         }
       }
