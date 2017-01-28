@@ -8,11 +8,16 @@ import {connect} from 'react-redux'
 import {Layout} from 'react-adm-lte/dist/react-adm-lte.min'
 
 import MainHeader from './MainHeader/MainHeader'
+import MainSidebar from './MainSidebar'
+import ControlSidebar, {ControlSidebarBackground} from './ControlSidebar'
 
 const MyLayout = (props) => {
   return (
     <Layout {...props}>
       <MainHeader />
+      <MainSidebar />
+      <ControlSidebar />
+      <ControlSidebarBackground />
     </Layout>
   )
 }

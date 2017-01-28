@@ -8,10 +8,12 @@ import logger from 'redux-logger'
 
 import layout from './layout/reducers'
 import mainHeader from './mainHeader/reducers'
+import controlSidebar from './controlSidebar/reducers'
 
 const reducers = combineReducers({
   layout,
-  mainHeader
+  mainHeader,
+  controlSidebar
 })
 
 const store = createStore(reducers,
