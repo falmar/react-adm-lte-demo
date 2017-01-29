@@ -14,14 +14,14 @@ const MyControlSidebar = ({open}) => {
     <ControlSidebar open={open}>
       <NavTab>
         <Tab active icon='fa fa-wrench' />
-        <Tab icon='fa fa-cog' />
-        <Tab icon='fa fa-user' />
+        <Tab icon='fa fa-home' />
+        <Tab icon='fa fa-gears' />
       </NavTab>
     </ControlSidebar>
   )
 }
 
-ControlSidebar.propTypes = {
+MyControlSidebar.propTypes = {
   open: PropTypes.bool
 }
 
