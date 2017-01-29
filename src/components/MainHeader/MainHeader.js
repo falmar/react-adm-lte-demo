@@ -9,12 +9,9 @@ import {MainHeaderComponents} from 'react-adm-lte'
 import SidebarToggle from './SidebarToggle'
 import ControlSidebarToggle from './ControlSidebarToggle'
 import Messages from './Messages'
-import Notifications from './Notifications'
-import Tasks from './Tasks'
-import User from './User'
 
 const {MainHeader, Logo, LogoText} = MainHeaderComponents
-const {Navbar, Menu} = MainHeaderComponents
+const {Navbar, NavbarMenu} = MainHeaderComponents
 
 const MySidebar = () => {
   return (
@@ -25,13 +22,10 @@ const MySidebar = () => {
       </Logo>
       <Navbar>
         <SidebarToggle />
-        <Menu>
+        <NavbarMenu>
           <Messages />
-          <Notifications />
-          <Tasks />
-          <User />
           <ControlSidebarToggle />
-        </Menu>
+        </NavbarMenu>
       </Navbar>
     </MainHeader>
   )
