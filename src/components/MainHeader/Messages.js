@@ -44,9 +44,9 @@ const MyMessages = props => {
   return (
     <Messages
       {...props}
-      label={4}
+      label={3}
       header='You have 3 messages'
-      footer='Read all messages'
+      footer='View all messages'
       onToggle={onToggle}
       onClickFooter={onToggle}
       >
