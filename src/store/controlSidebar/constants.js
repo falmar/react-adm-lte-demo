@@ -3,5 +3,6 @@
 // License that can be found in the LICENSE file.
 
 export default {
-  CTS_TOGGLE: 'CTS_TOGGLE'
+  CTS_TOGGLE: 'CTS_TOGGLE',
+  CTS_TOGGLE_TAB: 'CTS_TOGGLE_TAB'
 }

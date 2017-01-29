@@ -8,6 +8,14 @@ const toggleControlSidebar = () => ({
   type: constants.CTS_TOGGLE
 })
 
+const toggleControlSidebarTab = key => ({
+  type: constants.CTS_TOGGLE_TAB,
+  payload: {
+    key
+  }
+})
+
 export default {
-  toggleControlSidebar
+  toggleControlSidebar,
+  toggleControlSidebarTab
 }

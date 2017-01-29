@@ -7,7 +7,16 @@ jest.unmock('./../reducers')
 import reducer, {initialState} from './../reducers'
 
 const initState = {
-  open: false
+  open: false,
+  wrench: {
+    active: true
+  },
+  home: {
+    active: false
+  },
+  gears: {
+    active: false
+  }
 }
 
 describe('Store.ControlSidebar.Reducers', () => {
@@ -47,5 +56,57 @@ describe('Store.ControlSidebar.Reducers', () => {
     expect(
       reducer(state, action)
     ).toEqual(expectedState)
+  })
+
+  it(`should toggle wrench 'active' property to true`, () => {
+    const action = {type: 'CTS_TOGGLE_TAB', payload: {key: 'wrench'}}
+    const state = {
+      ...initialState,
+      wrench: {
+        ...initialState.wrench,
+        active: false
+      }
+    }
+    const expectedState = {
+      ...initialState,
+      wrench: {
+        ...initialState.wrench,
+        active: true
+      }
+    }
+
+    expect(
+      reducer(state, action)
+    ).toEqual(expectedState)
+  })
+
+  it(`should toggle wrench 'active' property to false`, () => {
+    const action = {type: 'CTS_TOGGLE_TAB', payload: {key: 'wrench'}}
+    const state = {
+      ...initialState,
+      wrench: {
+        ...initialState.wrench,
+        active: true
+      }
+    }
+    const expectedState = {
+      ...initialState,
+      wrench: {
+        ...initialState.wrench,
+        active: false
+      }
+    }
+
+    expect(
+      reducer(state, action)
+    ).toEqual(expectedState)
+  })
+
+  it(`should not change state if CTS Tab key does not exist `, () => {
+    const action = {type: 'CTS_TOGGLE_TAB', payload: {key: 'bleh'}}
+
+    expect(
+      reducer(initialState, action)
+    ).toEqual(initialState)
   })
 })
