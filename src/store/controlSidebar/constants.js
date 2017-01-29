@@ -4,5 +4,5 @@
 
 export default {
   CTS_TOGGLE: 'CTS_TOGGLE',
-  CTS_TOGGLE_TAB: 'CTS_TOGGLE_TAB'
+  CTS_SELECT_TAB: 'CTS_SELECT_TAB'
 }

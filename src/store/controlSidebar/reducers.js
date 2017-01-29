@@ -26,7 +26,7 @@ export default (state = initialState, action) => {
         ...state,
         open: !state.open
       }
-    case constants.CTS_TOGGLE_TAB: {
+    case constants.CTS_SELECT_TAB: {
       const {key} = action.payload
 
       if (!state.hasOwnProperty(key)) {
@@ -35,9 +35,17 @@ export default (state = initialState, action) => {
 
       return {
         ...state,
-        [key]: {
-          ...state[key],
-          active: !state[key].active
+        wrench: {
+          ...state.wrench,
+          active: key === 'wrench'
+        },
+        home: {
+          ...state.home,
+          active: key === 'home'
+        },
+        gears: {
+          ...state.gears,
+          active: key === 'gears'
         }
       }
     }

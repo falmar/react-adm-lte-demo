@@ -59,7 +59,7 @@ describe('Store.ControlSidebar.Reducers', () => {
   })
 
   it(`should toggle wrench 'active' property to true`, () => {
-    const action = {type: 'CTS_TOGGLE_TAB', payload: {key: 'wrench'}}
+    const action = {type: 'CTS_SELECT_TAB', payload: {key: 'wrench'}}
     const state = {
       ...initialState,
       wrench: {
@@ -80,13 +80,17 @@ describe('Store.ControlSidebar.Reducers', () => {
     ).toEqual(expectedState)
   })
 
-  it(`should toggle wrench 'active' property to false`, () => {
-    const action = {type: 'CTS_TOGGLE_TAB', payload: {key: 'wrench'}}
+  it(`should toggle wrench.active to false and home.active to true`, () => {
+    const action = {type: 'CTS_SELECT_TAB', payload: {key: 'home'}}
     const state = {
       ...initialState,
       wrench: {
         ...initialState.wrench,
         active: true
+      },
+      home: {
+        ...initialState.home,
+        active: false
       }
     }
     const expectedState = {
@@ -94,6 +98,10 @@ describe('Store.ControlSidebar.Reducers', () => {
       wrench: {
         ...initialState.wrench,
         active: false
+      },
+      home: {
+        ...initialState.home,
+        active: true
       }
     }
 
@@ -103,7 +111,7 @@ describe('Store.ControlSidebar.Reducers', () => {
   })
 
   it(`should not change state if CTS Tab key does not exist `, () => {
-    const action = {type: 'CTS_TOGGLE_TAB', payload: {key: 'bleh'}}
+    const action = {type: 'CTS_SELECT_TAB', payload: {key: 'bleh'}}
 
     expect(
       reducer(initialState, action)

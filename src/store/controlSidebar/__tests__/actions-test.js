@@ -15,19 +15,19 @@ describe('Store.ControlSidebar.Actions', () => {
     ).toEqual(action)
   })
 
-  it(`must have type: CTS_TOGGLE_TAB and tab its key 'wrench'`, () => {
-    const action = {type: 'CTS_TOGGLE_TAB', payload: {key: 'wrench'}}
+  it(`must have type: CTS_SELECT_TAB and tab its key: wrench`, () => {
+    const action = {type: 'CTS_SELECT_TAB', payload: {key: 'wrench'}}
 
     expect(
-      actions.toggleControlSidebarTab('wrench')
+      actions.selectControlSidebarTab('wrench')
     ).toEqual(action)
   })
 
-  it(`must have type: CTS_TOGGLE_TAB and tab its key 'gears'`, () => {
-    const action = {type: 'CTS_TOGGLE_TAB', payload: {key: 'gears'}}
+  it(`must have type: CTS_SELECT_TAB and tab its key: gears`, () => {
+    const action = {type: 'CTS_SELECT_TAB', payload: {key: 'gears'}}
 
     expect(
-      actions.toggleControlSidebarTab('gears')
+      actions.selectControlSidebarTab('gears')
     ).toEqual(action)
   })
 })
