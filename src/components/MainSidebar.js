@@ -2,38 +2,74 @@
 // Use of this source code is governed by a MIT License
 // License that can be found in the LICENSE file.
 
-import React from 'react'
+import React, {Component} from 'react'
 import {MainSidebarComponents} from 'react-adm-lte'
 
 const {MainSidebar, UserPanel, SearchForm, Menu, Item} = MainSidebarComponents
 
-const MySidebar = () => (
-  <MainSidebar>
-    <UserPanel
-      imageUrl='https://almsaeedstudio.com/themes/AdminLTE/dist/img/user2-160x160.jpg'
-      title='Alexander Pierce'
-      statusText=' Online'
-      statusClass='text-success' />
-    <SearchForm
-      placeholder='Search...'
-      value='default-value'
-      onSubmit={() => {}} />
-    <Menu isRoot>
-      <Item header name='Main Section' />
-      <Item isTreeview name='Dashboard' active iconClass='fa fa-dashboard'>
-        <Menu>
-          <Item name='Item 1' iconClass='fa fa-circle-o' />
-          <Item name='Item 2' iconClass='fa fa-circle-o' />
+const menuItems = [{
+  name: 'Main Section',
+  header: true
+}, {
+  name: 'Dashboard',
+  iconClass: 'fa fa-dashboard',
+  children: [{
+    name: 'Dashboard 1'
+  }, {
+    name: 'Dashboard 2'
+  }]
+}, {
+  name: 'Users',
+  iconClass: 'fa fa-user',
+  children: [{
+    name: 'Dashboard 1'
+  }, {
+    name: 'Dashboard 2'
+  }]
+}]
+
+class MySidebar extends Component {
+  buildMenu (items) {
+    return items.map(item => {
+      if (item.children instanceof Array && item.children.length > 0) {
+        return (
+          <Item
+            isTreeview name={item.name}
+            iconClass={item.iconClass || 'fa fa-circle-o'}>
+            <Menu>
+              {this.buildMenu(item.children)}
+            </Menu>
+          </Item>
+        )
+      }
+
+      return (
+        <Item
+          header={item.header}
+          name={item.name}
+          iconClass={item.iconClass || 'fa fa-circle-o'} />
+      )
+    })
+  }
+
+  render () {
+    return (
+      <MainSidebar>
+        <UserPanel
+          imageUrl='https://almsaeedstudio.com/themes/AdminLTE/dist/img/user2-160x160.jpg'
+          title='Alexander Pierce'
+          statusText=' Online'
+          statusClass='text-success' />
+        <SearchForm
+          placeholder='Search...'
+          value='default-value'
+          onSubmit={() => {}} />
+        <Menu isRoot>
+          {this.buildMenu(menuItems)}
         </Menu>
-      </Item>
-      <Item isTreeview name='Users' iconClass='fa fa-user'>
-        <Menu>
-          <Item name='Item Users 1' iconClass='fa fa-circle-o' />
-          <Item name='Item Users 2' iconClass='fa fa-circle-o' />
-        </Menu>
-      </Item>
-    </Menu>
-  </MainSidebar>
-)
+      </MainSidebar>
+    )
+  }
+}
 
 export default MySidebar
