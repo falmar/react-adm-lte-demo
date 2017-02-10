@@ -8,12 +8,19 @@ import {connect} from 'react-redux'
 import {Layout} from 'react-adm-lte/dist/react-adm-lte.min'
 
 import MainHeader from './MainHeader/MainHeader'
-import MainSidebar from './MainSidebar'
+import MainSidebar from './../components/MainSidebar'
 import ControlSidebar, {ControlSidebarBackground} from './ControlSidebar'
 
-const MyLayout = (props) => {
+const removeChildren = props => {
+  return {
+    ...props,
+    children: null
+  }
+}
+
+const MyLayout = props => {
   return (
-    <Layout {...props}>
+    <Layout {...removeChildren(props)}>
       <MainHeader />
       <MainSidebar />
       <ControlSidebar />

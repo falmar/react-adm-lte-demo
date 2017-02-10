@@ -13,7 +13,7 @@ import './css/app.css'
 
 import store from './store/store'
 
-import Layout from './components/Layout'
+import Layout from './containers/Layout'
 
 ReactDOM.render(
   <Provider store={store}>
