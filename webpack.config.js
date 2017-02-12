@@ -38,7 +38,8 @@ module.exports = {
   },
   output: {
     // output path
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, 'public', 'assets'),
+    publicPath: '/assets/',
     // output file
     filename: 'app.min.js'
   },
