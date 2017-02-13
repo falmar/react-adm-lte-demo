@@ -19,12 +19,12 @@ const menuItems = [{
     name: 'Dashboard 2'
   }]
 }, {
-  name: 'Users',
+  name: 'Layout',
   iconClass: 'fa fa-user',
   children: [{
-    name: 'Dashboard 1'
+    name: 'Layout 1'
   }, {
-    name: 'Dashboard 2'
+    name: 'Layout 2'
   }]
 }]
 
@@ -47,7 +47,8 @@ class MySidebar extends Component {
         <Item
           header={item.header}
           name={item.name}
-          iconClass={item.iconClass || 'fa fa-circle-o'} />
+          iconClass={item.iconClass || 'fa fa-circle-o'}
+          />
       )
     })
   }
