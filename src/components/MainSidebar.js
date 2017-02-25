@@ -8,23 +8,23 @@ import {MainSidebarComponents} from 'react-adm-lte'
 const {MainSidebar, UserPanel, SearchForm, Menu, Item} = MainSidebarComponents
 
 const menuItems = [{
-  name: 'Main Section',
+  title: 'Main Section',
   header: true
 }, {
-  name: 'Dashboard',
+  title: 'Dashboard',
   iconClass: 'fa fa-dashboard',
   children: [{
-    name: 'Dashboard 1'
+    title: 'Dashboard 1'
   }, {
-    name: 'Dashboard 2'
+    title: 'Dashboard 2'
   }]
 }, {
-  name: 'Layout',
+  title: 'Layout',
   iconClass: 'fa fa-user',
   children: [{
-    name: 'Layout 1'
+    title: 'Layout 1'
   }, {
-    name: 'Layout 2'
+    title: 'Layout 2'
   }]
 }]
 
@@ -34,7 +34,7 @@ class MySidebar extends Component {
       if (item.children instanceof Array && item.children.length > 0) {
         return (
           <Item
-            isTreeview name={item.name}
+            isTreeview title={item.title}
             iconClass={item.iconClass || 'fa fa-circle-o'}>
             <Menu>
               {this.buildMenu(item.children)}
@@ -46,7 +46,7 @@ class MySidebar extends Component {
       return (
         <Item
           header={item.header}
-          name={item.name}
+          title={item.title}
           iconClass={item.iconClass || 'fa fa-circle-o'}
           />
       )
