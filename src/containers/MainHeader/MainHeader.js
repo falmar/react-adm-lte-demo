@@ -21,7 +21,7 @@ const MySidebar = () => {
     <MainHeader>
       <Logo>
         <LogoText isLarge boldTitle='React' title='AdminLTE' />
-        <LogoText isMini boldTitle='R' title='LTE' />
+        <LogoText isMini boldTitle='R' title='LT' />
       </Logo>
       <Navbar>
         <SidebarToggle />
