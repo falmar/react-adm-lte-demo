@@ -8,11 +8,19 @@ import {MainSidebarComponents} from 'react-adm-lte'
 const {MainSidebar, UserPanel, SearchForm, Menu, Item} = MainSidebarComponents
 
 const items = [
-  {id: '1', parentId: null, title: 'Dashboard', treeview: true, iconClass: 'fa fa-dashboard'},
+  {id: '1', parentId: null, title: 'Dashboard', isTreeview: true, iconClass: 'fa fa-dashboard'},
   {id: '1-1', parentId: '1', title: 'Dashboard v1'},
   {id: '1-2', parentId: '1', title: 'Dashboard v2'},
 
-  {id: '2', parentId: null, title: 'Layout Options', treeview: true, iconClass: 'fa fa-files-o'},
+  {
+    id: '2',
+    parentId: null,
+    title: 'Layout Options',
+    isTreeview: true,
+    iconClass: 'fa fa-files-o',
+    label: '4',
+    labelClassName: 'label-primary'
+  },
   {id: '2-1', parentId: '2', title: 'Top Navigation'},
   {id: '2-2', parentId: '2', title: 'Boxed'},
   {id: '2-3', parentId: '2', title: 'Fixed'},
@@ -29,7 +37,7 @@ class MySidebar extends Component {
       if (children.length > 0) {
         return (
           <Item
-            isTreeview title={item.title}
+            {...item}
             iconClass={item.iconClass || 'fa fa-circle-o'}>
             <Menu>
               {children}
@@ -40,8 +48,7 @@ class MySidebar extends Component {
 
       return (
         <Item
-          header={item.header}
-          title={item.title}
+          {...item}
           iconClass={item.iconClass || 'fa fa-circle-o'}
           />
       )
