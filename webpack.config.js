@@ -10,7 +10,7 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules|bower_components|react-adm-lte\.js)/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react', 'stage-0'],
