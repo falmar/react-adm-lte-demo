@@ -5,7 +5,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import {Layout} from 'react-adm-lte/dist/react-adm-lte.min'
+import {Layout} from 'react-adm-lte'
 
 import MainHeader from './MainHeader/MainHeader'
 import MainSidebar from './../components/MainSidebar'
