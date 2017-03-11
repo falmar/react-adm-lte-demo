@@ -37,6 +37,7 @@ class MySidebar extends Component {
       if (children.length > 0) {
         return (
           <Item
+            key={item.id}
             {...item}
             iconClass={item.iconClass || 'fa fa-circle-o'}>
             <Menu>
@@ -48,6 +49,7 @@ class MySidebar extends Component {
 
       return (
         <Item
+          key={item.id}
           {...item}
           iconClass={item.iconClass || 'fa fa-circle-o'}
           />
