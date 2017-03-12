@@ -6,7 +6,8 @@
     "clean": "rimraf dist",
     "build": "eslint src && npm run clean && NODE_ENV=production webpack -p --config webpack.config.prod.js",
     "start": "webpack-dev-server --config webpack.config.dev.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint src && jest",
+    "test:watch": "jest --watch --verbose"
   },
   "repository": {
     "type": "git",
