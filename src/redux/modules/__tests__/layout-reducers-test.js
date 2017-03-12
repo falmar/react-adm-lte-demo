@@ -10,7 +10,7 @@ const initialState = {
   skin: 'skin-blue'
 }
 
-describe('Store.Layout.Reducers', () => {
+describe('Layout reducers', () => {
   it(`should return initialState`, () => {
     expect(
       reducer(undefined, {type: undefined})

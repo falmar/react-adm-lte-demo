@@ -1,6 +1,6 @@
 import * as actions from '../layout'
 
-describe('Store.Layout.Actions', () => {
+describe('Layout actions creators', () => {
   it(`must have type: COLLAPSE_TOGGLE`, () => {
     const action = {type: 'react-adm-lte-demo/layout/COLLAPSE_TOGGLE'}
 
