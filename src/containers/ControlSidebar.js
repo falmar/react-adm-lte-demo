@@ -20,15 +20,15 @@ const MyControlSidebar = props => {
         <Tab
           onClick={() => onClickTab('wrench')}
           active={wrenchActive}
-          icon='fa fa-wrench' />
+          iconClass='fa fa-wrench' />
         <Tab
           onClick={() => onClickTab('home')}
           active={homeActive}
-          icon='fa fa-home' />
+          iconClass='fa fa-home' />
         <Tab
           onClick={() => onClickTab('gears')}
           active={gearsActive}
-          icon='fa fa-gears' />
+          iconClass='fa fa-gears' />
       </NavTab>
     </ControlSidebar>
   )

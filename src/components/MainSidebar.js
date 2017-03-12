@@ -11,7 +11,6 @@ const items = [
   {id: '1', parentId: null, title: 'Dashboard', isTreeview: true, iconClass: 'fa fa-dashboard'},
   {id: '1-1', parentId: '1', title: 'Dashboard v1'},
   {id: '1-2', parentId: '1', title: 'Dashboard v2'},
-
   {
     id: '2',
     parentId: null,
@@ -67,7 +66,8 @@ class MySidebar extends Component {
           statusClass='text-success' />
         <SearchForm
           placeholder='Search...'
-          onSubmit={() => {}} />
+          onSubmit={() => {}}
+          onChange={() => {}} />
         <Menu isRoot>
           {this.buildMenu(items, null)}
         </Menu>

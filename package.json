@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "eslint src && npm run clean && NODE_ENV=production webpack -p --config webpack.config.prod.js",
-    "start": "webpack-dev-server --config webpack.config.dev.js",
+    "start": "NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
     "test": "eslint src && jest",
     "test:watch": "jest --watch --verbose"
   },
@@ -28,7 +28,7 @@
     "react": "^15.4.2",
     "react-adm-lte": "0.0.6",
     "react-dom": "^15.4.2",
-    "react-redux": "^5.0.3",
+    "react-redux": "^4.4.6",
     "redux": "^3.6.0",
     "redux-logger": "^2.8.2",
     "redux-thunk": "^2.2.0"
@@ -63,8 +63,8 @@
     "rimraf": "^2.6.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.8",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
   },
   "jest": {
     "moduleFileExtensions": [

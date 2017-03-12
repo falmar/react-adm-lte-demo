@@ -11,16 +11,9 @@ import MainHeader from './MainHeader/MainHeader'
 import MainSidebar from './../components/MainSidebar'
 import ControlSidebar, {ControlSidebarBackground} from './ControlSidebar'
 
-const removeChildren = props => {
-  return {
-    ...props,
-    children: null
-  }
-}
-
 const MyLayout = props => {
   return (
-    <Layout {...removeChildren(props)}>
+    <Layout {...props}>
       <MainHeader />
       <MainSidebar />
       <ControlSidebar />
