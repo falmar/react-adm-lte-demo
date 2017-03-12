@@ -1,16 +1,10 @@
-// Copyright 2017 David Lavieri.  All rights reserved.
-// Use of this source code is governed by a MIT License
-// License that can be found in the LICENSE file.
-
-jest.unmock('./../actions.js')
-
-import actions from './../actions.js'
+import * as actions from '../mainHeader.js'
 
 describe('Store.MainHeader.Actions', () => {
   describe('Messages', () => {
-    it('should have type MAINHEADER_MESSAGES_TOGGLE and payload.open false', () => {
+    it('should have type MESSAGES_TOGGLE and payload.open false', () => {
       const expectedAction = {
-        type: 'MAINHEADER_MESSAGES_TOGGLE',
+        type: 'react-adm-lte-demo/mainHeader/MESSAGES_TOGGLE',
         payload: {
           open: false
         }
@@ -21,9 +15,9 @@ describe('Store.MainHeader.Actions', () => {
       ).toEqual(expectedAction)
     })
 
-    it('should have type MAINHEADER_MESSAGES_TOGGLE and payload.open true', () => {
+    it('should have type MESSAGES_TOGGLE and payload.open true', () => {
       const expectedAction = {
-        type: 'MAINHEADER_MESSAGES_TOGGLE',
+        type: 'react-adm-lte-demo/mainHeader/MESSAGES_TOGGLE',
         payload: {
           open: true
         }
@@ -36,9 +30,9 @@ describe('Store.MainHeader.Actions', () => {
   })
 
   describe('Notifications', () => {
-    it('should have type MAINHEADER_NOTIFICATIONS_TOGGLE and payload.open false', () => {
+    it('should have type NOTIFICATIONS_TOGGLE and payload.open false', () => {
       const expectedAction = {
-        type: 'MAINHEADER_NOTIFICATIONS_TOGGLE',
+        type: 'react-adm-lte-demo/mainHeader/NOTIFICATIONS_TOGGLE',
         payload: {
           open: false
         }
@@ -49,9 +43,9 @@ describe('Store.MainHeader.Actions', () => {
       ).toEqual(expectedAction)
     })
 
-    it('should have type MAINHEADER_NOTIFICATIONS_TOGGLE and payload.open true', () => {
+    it('should have type NOTIFICATIONS_TOGGLE and payload.open true', () => {
       const expectedAction = {
-        type: 'MAINHEADER_NOTIFICATIONS_TOGGLE',
+        type: 'react-adm-lte-demo/mainHeader/NOTIFICATIONS_TOGGLE',
         payload: {
           open: true
         }
@@ -64,9 +58,9 @@ describe('Store.MainHeader.Actions', () => {
   })
 
   describe('Tasks', () => {
-    it('should have type MAINHEADER_TASKS_TOGGLE and payload.open false', () => {
+    it('should have type TASKS_TOGGLE and payload.open false', () => {
       const expectedAction = {
-        type: 'MAINHEADER_TASKS_TOGGLE',
+        type: 'react-adm-lte-demo/mainHeader/TASKS_TOGGLE',
         payload: {
           open: false
         }
@@ -77,9 +71,9 @@ describe('Store.MainHeader.Actions', () => {
       ).toEqual(expectedAction)
     })
 
-    it('should have type MAINHEADER_TASKS_TOGGLE and payload.open true', () => {
+    it('should have type TASKS_TOGGLE and payload.open true', () => {
       const expectedAction = {
-        type: 'MAINHEADER_TASKS_TOGGLE',
+        type: 'react-adm-lte-demo/mainHeader/TASKS_TOGGLE',
         payload: {
           open: true
         }
@@ -92,9 +86,9 @@ describe('Store.MainHeader.Actions', () => {
   })
 
   describe('User', () => {
-    it('should have type MAINHEADER_USER_TOGGLE and payload.open false', () => {
+    it('should have type USER_TOGGLE and payload.open false', () => {
       const expectedAction = {
-        type: 'MAINHEADER_USER_TOGGLE',
+        type: 'react-adm-lte-demo/mainHeader/USER_TOGGLE',
         payload: {
           open: false
         }
@@ -105,9 +99,9 @@ describe('Store.MainHeader.Actions', () => {
       ).toEqual(expectedAction)
     })
 
-    it('should have type MAINHEADER_USER_TOGGLE and payload.open true', () => {
+    it('should have type USER_TOGGLE and payload.open true', () => {
       const expectedAction = {
-        type: 'MAINHEADER_USER_TOGGLE',
+        type: 'react-adm-lte-demo/mainHeader/USER_TOGGLE',
         payload: {
           open: true
         }

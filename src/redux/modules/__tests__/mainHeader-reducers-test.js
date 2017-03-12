@@ -1,12 +1,7 @@
-// Copyright 2017 David Lavieri.  All rights reserved.
-// Use of this source code is governed by a MIT License
-// License that can be found in the LICENSE file.
+import reducer from '../mainHeader.js'
 
-jest.unmock('./../reducers.js')
-
-import reducer, {initialState} from './../reducers.js'
-
-const initState = {
+const initialState = {
+  hydrated: true,
   messages: {
     open: false
   },
@@ -21,16 +16,19 @@ const initState = {
   }
 }
 
-describe('Store.MainHeader.Reducers', () => {
+describe('MainHeader Reducers', () => {
   it('should have initialState at first run', () => {
     expect(
       reducer(undefined, {type: ''})
-    ).toEqual(initState)
+    ).toEqual(initialState)
   })
 
   describe('Messages', () => {
     it('should toggle open property to true', () => {
-      const action = {type: 'MAINHEADER_MESSAGES_TOGGLE', payload: {open: true}}
+      const action = {
+        type: 'react-adm-lte-demo/mainHeader/MESSAGES_TOGGLE',
+        payload: {open: true}
+      }
       const state = {
         ...initialState,
         messages: {
@@ -52,7 +50,10 @@ describe('Store.MainHeader.Reducers', () => {
     })
 
     it('should toggle open property to false', () => {
-      const action = {type: 'MAINHEADER_MESSAGES_TOGGLE', payload: {open: false}}
+      const action = {
+        type: 'react-adm-lte-demo/mainHeader/MESSAGES_TOGGLE',
+        payload: {open: false}
+      }
       const state = {
         ...initialState,
         messages: {
@@ -76,7 +77,10 @@ describe('Store.MainHeader.Reducers', () => {
 
   describe('Notifications', () => {
     it('should toggle open property to true', () => {
-      const action = {type: 'MAINHEADER_NOTIFICATIONS_TOGGLE', payload: {open: true}}
+      const action = {
+        type: 'react-adm-lte-demo/mainHeader/NOTIFICATIONS_TOGGLE',
+        payload: {open: true}
+      }
       const state = {
         ...initialState,
         notifications: {
@@ -98,7 +102,10 @@ describe('Store.MainHeader.Reducers', () => {
     })
 
     it('should toggle open property to false', () => {
-      const action = {type: 'MAINHEADER_NOTIFICATIONS_TOGGLE', payload: {open: false}}
+      const action = {
+        type: 'react-adm-lte-demo/mainHeader/NOTIFICATIONS_TOGGLE',
+        payload: {open: false}
+      }
       const state = {
         ...initialState,
         notifications: {
@@ -122,7 +129,10 @@ describe('Store.MainHeader.Reducers', () => {
 
   describe('Tasks', () => {
     it('should toggle open property to true', () => {
-      const action = {type: 'MAINHEADER_TASKS_TOGGLE', payload: {open: true}}
+      const action = {
+        type: 'react-adm-lte-demo/mainHeader/TASKS_TOGGLE',
+        payload: {open: true}
+      }
       const state = {
         ...initialState,
         tasks: {
@@ -144,7 +154,10 @@ describe('Store.MainHeader.Reducers', () => {
     })
 
     it('should toggle open property to false', () => {
-      const action = {type: 'MAINHEADER_TASKS_TOGGLE', payload: {open: false}}
+      const action = {
+        type: 'react-adm-lte-demo/mainHeader/TASKS_TOGGLE',
+        payload: {open: false}
+      }
       const state = {
         ...initialState,
         tasks: {
@@ -168,7 +181,10 @@ describe('Store.MainHeader.Reducers', () => {
 
   describe('Tasks', () => {
     it('should toggle open property to true', () => {
-      const action = {type: 'MAINHEADER_USER_TOGGLE', payload: {open: true}}
+      const action = {
+        type: 'react-adm-lte-demo/mainHeader/USER_TOGGLE',
+        payload: {open: true}
+      }
       const state = {
         ...initialState,
         user: {
@@ -190,7 +206,10 @@ describe('Store.MainHeader.Reducers', () => {
     })
 
     it('should toggle open property to false', () => {
-      const action = {type: 'MAINHEADER_USER_TOGGLE', payload: {open: false}}
+      const action = {
+        type: 'react-adm-lte-demo/mainHeader/USER_TOGGLE',
+        payload: {open: false}
+      }
       const state = {
         ...initialState,
         user: {
