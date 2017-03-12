@@ -1,35 +1,39 @@
 import * as actions from '../controlSidebar'
 
-describe('Store.ControlSidebar.Actions', () => {
-  it(`must have type: TOGGLE`, () => {
-    const action = {
-      type: 'react-adm-lte-demo/controlSidebar/TOGGLE'
-    }
+describe('ControlSidebar actions creators', () => {
+  describe('Toggle', () => {
+    it(`must have type: TOGGLE`, () => {
+      const action = {
+        type: 'react-adm-lte-demo/controlSidebar/TOGGLE'
+      }
 
-    expect(
-      actions.toggleControlSidebar()
-    ).toEqual(action)
+      expect(
+        actions.toggleControlSidebar()
+      ).toEqual(action)
+    })
   })
 
-  it(`must have type: SELECT_TAB and tab its key: wrench`, () => {
-    const action = {
-      type: 'react-adm-lte-demo/controlSidebar/SELECT_TAB',
-      payload: {key: 'wrench'}
-    }
+  describe('Tabs', () => {
+    it(`must have type: SELECT_TAB and tab its key: wrench`, () => {
+      const action = {
+        type: 'react-adm-lte-demo/controlSidebar/SELECT_TAB',
+        payload: {key: 'wrench'}
+      }
 
-    expect(
-      actions.selectControlSidebarTab('wrench')
-    ).toEqual(action)
-  })
+      expect(
+        actions.selectControlSidebarTab('wrench')
+      ).toEqual(action)
+    })
 
-  it(`must have type: SELECT_TAB and tab its key: gears`, () => {
-    const action = {
-      type: 'react-adm-lte-demo/controlSidebar/SELECT_TAB',
-      payload: {key: 'gears'}
-    }
+    it(`must have type: SELECT_TAB and tab its key: gears`, () => {
+      const action = {
+        type: 'react-adm-lte-demo/controlSidebar/SELECT_TAB',
+        payload: {key: 'gears'}
+      }
 
-    expect(
-      actions.selectControlSidebarTab('gears')
-    ).toEqual(action)
+      expect(
+        actions.selectControlSidebarTab('gears')
+      ).toEqual(action)
+    })
   })
 })
