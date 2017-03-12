@@ -1,22 +1,35 @@
-// Copyright 2017 David Lavieri.  All rights reserved.
-// Use of this source code is governed by a MIT License
-// License that can be found in the LICENSE file.
-
 import React from 'react'
 import ReactDOM from 'react-dom'
+// AppContainer is a necessary wrapper component for HMR
+import { AppContainer } from 'react-hot-loader'
 import {Provider} from 'react-redux'
 
-import 'admin-lte/bootstrap/css/bootstrap.min.css'
-import 'admin-lte/dist/css/AdminLTE.min.css'
-import 'admin-lte/dist/css/skins/skin-blue.min.css'
-import './css/app.css'
+import App from './components/App'
+
+// import configureStore from './redux/configureStore'
+//
+// const preloadedState = window.__PRELOADED_STATE__ || {}
+// const store = configureStore(preloadedState)
 
 import store from './store/store'
 
-import Layout from './containers/Layout'
+const render = (Component) => {
+  ReactDOM.render(
+    <AppContainer>
+      <Provider store={store}>
+        <Component />
+      </Provider>
+    </AppContainer>
+    ,
+    document.getElementById('root')
+  )
+}
 
-ReactDOM.render(
-  <Provider store={store}>
-    <Layout />
-  </Provider>
-, document.getElementById('app'))
+render(App)
+
+// Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
+    render(App)
+  })
+}

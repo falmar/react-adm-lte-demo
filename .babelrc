@@ -8,6 +8,9 @@
     "test": {
       "plugins": ["transform-es2015-modules-commonjs"]
     },
+    "development": {
+      "plugins": ["react-hot-loader/babel"]
+    },
     "production": {
       "plugins": [
         "transform-react-constant-elements",
