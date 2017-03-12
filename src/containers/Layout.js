@@ -7,6 +7,8 @@ import MainHeader from './MainHeader/MainHeader'
 import MainSidebar from './../components/MainSidebar'
 import ControlSidebar, {ControlSidebarBackground} from './ControlSidebar'
 
+import './Layout.css'
+
 const MyLayout = props => {
   return (
     <Layout {...props}>
