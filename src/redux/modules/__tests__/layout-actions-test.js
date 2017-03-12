@@ -1,46 +1,40 @@
-// Copyright 2017 David Lavieri.  All rights reserved.
-// Use of this source code is governed by a MIT License
-// License that can be found in the LICENSE file.
-
-jest.unmock('./../actions')
-
-import actions from './../actions'
+import * as actions from '../layout'
 
 describe('Store.Layout.Actions', () => {
-  it(`must have type: LAYOUT_COLLAPSE_TOGGLE`, () => {
-    const action = {type: 'LAYOUT_COLLAPSE_TOGGLE'}
+  it(`must have type: COLLAPSE_TOGGLE`, () => {
+    const action = {type: 'react-adm-lte-demo/layout/COLLAPSE_TOGGLE'}
 
     expect(
       actions.collapse()
     ).toEqual(action)
   })
 
-  it(`must have type: LAYOUT_SIDEBAR_MINI_TOGGLE`, () => {
-    const action = {type: 'LAYOUT_SIDEBAR_MINI_TOGGLE'}
+  it(`must have type: SIDEBAR_MINI_TOGGLE`, () => {
+    const action = {type: 'react-adm-lte-demo/layout/SIDEBAR_MINI_TOGGLE'}
 
     expect(
       actions.sidebarMini()
     ).toEqual(action)
   })
 
-  it(`must have type: LAYOUT_BOXED_TOGGLE`, () => {
-    const action = {type: 'LAYOUT_BOXED_TOGGLE'}
+  it(`must have type: BOXED_TOGGLE`, () => {
+    const action = {type: 'react-adm-lte-demo/layout/BOXED_TOGGLE'}
 
     expect(
       actions.boxed()
     ).toEqual(action)
   })
 
-  it(`must have type: LAYOUT_FIXED_TOGGLE`, () => {
-    const action = {type: 'LAYOUT_FIXED_TOGGLE'}
+  it(`must have type: FIXED_TOGGLE`, () => {
+    const action = {type: 'react-adm-lte-demo/layout/FIXED_TOGGLE'}
 
     expect(
       actions.fixed()
     ).toEqual(action)
   })
 
-  it(`must have type: LAYOUT_TOP_NAVBAR_TOGGLE`, () => {
-    const action = {type: 'LAYOUT_TOP_NAVBAR_TOGGLE'}
+  it(`must have type: TOP_NAVBAR_TOGGLE`, () => {
+    const action = {type: 'react-adm-lte-demo/layout/TOP_NAVBAR_TOGGLE'}
 
     expect(
       actions.topNavbar()
@@ -48,9 +42,9 @@ describe('Store.Layout.Actions', () => {
   })
 
   describe('changeSkin', () => {
-    it(`should have type: LAYOUT_CHANGE_SKIN`, () => {
+    it(`should have type: CHANGE_SKIN`, () => {
       const {type} = actions.changeSkin()
-      const expectedType = 'LAYOUT_CHANGE_SKIN'
+      const expectedType = 'react-adm-lte-demo/layout/CHANGE_SKIN'
 
       expect(
         type

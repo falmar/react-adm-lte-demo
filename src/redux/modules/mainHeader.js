@@ -34,8 +34,8 @@ export const toggleUser = open => ({
 })
 
 // reducer
-
 const initialState = {
+  hydrated: false,
   messages: {
     open: false
   },
@@ -49,8 +49,6 @@ const initialState = {
     open: false
   }
 }
-
-export {initialState}
 
 export default (state = initialState, action) => {
   if (!state.hydrated) {
