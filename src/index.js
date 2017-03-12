@@ -6,12 +6,10 @@ import {Provider} from 'react-redux'
 
 import App from './components/App'
 
-// import configureStore from './redux/configureStore'
-//
-// const preloadedState = window.__PRELOADED_STATE__ || {}
-// const store = configureStore(preloadedState)
+import configureStore from './redux/configureStore'
 
-import store from './store/store'
+const preloadedState = window.__PRELOADED_STATE__ || {}
+const store = configureStore(preloadedState)
 
 const render = (Component) => {
   ReactDOM.render(

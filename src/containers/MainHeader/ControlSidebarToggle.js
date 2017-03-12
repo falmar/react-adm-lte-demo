@@ -5,7 +5,7 @@
 import {connect} from 'react-redux'
 import {MainHeaderComponents} from 'react-adm-lte'
 
-import actions from './../../store/controlSidebar/actions'
+import * as actions from './../../redux/modules/controlSidebar'
 
 const {ControlSidebarToggle} = MainHeaderComponents
 

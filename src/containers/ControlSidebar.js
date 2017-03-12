@@ -6,7 +6,7 @@ import React, {PropTypes} from 'react'
 import {connect} from 'react-redux'
 import {ControlSidebarComponents} from 'react-adm-lte'
 
-import actions from '../store/controlSidebar/actions'
+import * as actions from '../redux/modules/controlSidebar'
 
 const {ControlSidebar, ControlSidebarBackground, NavTab, Tab} = ControlSidebarComponents
 

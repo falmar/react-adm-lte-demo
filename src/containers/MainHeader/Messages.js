@@ -6,7 +6,7 @@ import React, {PropTypes} from 'react'
 import {connect} from 'react-redux'
 import {MainHeaderComponents} from 'react-adm-lte'
 
-import actions from '../../store/mainHeader/actions'
+import * as actions from '../../redux/modules/mainHeader'
 
 const {Messages, MessageItem} = MainHeaderComponents
 

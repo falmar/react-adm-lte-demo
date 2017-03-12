@@ -5,7 +5,7 @@
 import {connect} from 'react-redux'
 import {MainHeaderComponents} from 'react-adm-lte'
 
-import layoutActions from './../../store/layout/actions'
+import * as layoutActions from '../../redux/modules/layout'
 
 const {SidebarToggle} = MainHeaderComponents
 
