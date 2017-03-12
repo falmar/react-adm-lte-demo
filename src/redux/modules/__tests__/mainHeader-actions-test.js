@@ -1,6 +1,6 @@
 import * as actions from '../mainHeader.js'
 
-describe('Store.MainHeader.Actions', () => {
+describe('MainHeader actions creators', () => {
   describe('Messages', () => {
     it('should have type MESSAGES_TOGGLE and payload.open false', () => {
       const expectedAction = {

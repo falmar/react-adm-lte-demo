@@ -16,7 +16,7 @@ const initialState = {
   }
 }
 
-describe('MainHeader Reducers', () => {
+describe('MainHeader reducers', () => {
   it('should have initialState at first run', () => {
     expect(
       reducer(undefined, {type: ''})
