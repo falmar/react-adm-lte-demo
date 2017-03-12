@@ -45,7 +45,7 @@ const initialState = {
   skin: 'skin-blue'
 }
 
-export default (state = initialState, action) => {
+export default function reducer (state = initialState, action) {
   if (!state.hydrated) {
     state = {...initialState, ...state, hydrated: true}
   }

@@ -1,10 +1,22 @@
-// Copyright 2017 David Lavieri.  All rights reserved.
-// Use of this source code is governed by a MIT License
-// License that can be found in the LICENSE file.
+// constants
+const TOGGLE = 'react-adm-lte-demo/controlSidebar/TOGGLE'
+const SELECT_TAB = 'react-adm-lte-demo/controlSidebar/SELECT_TAB'
 
-import constants from './constants'
+// actions
+export const toggleControlSidebar = () => ({
+  type: TOGGLE
+})
 
+export const selectControlSidebarTab = key => ({
+  type: SELECT_TAB,
+  payload: {
+    key
+  }
+})
+
+// reducers
 const initialState = {
+  hydrated: false,
   open: false,
   wrench: {
     active: true
@@ -17,16 +29,18 @@ const initialState = {
   }
 }
 
-export {initialState}
+export default function reducer (state = initialState, action) {
+  if (!state.hydrated) {
+    state = {...initialState, ...state, hydrated: true}
+  }
 
-export default (state = initialState, action) => {
   switch (action.type) {
-    case constants.CTS_TOGGLE:
+    case TOGGLE:
       return {
         ...state,
         open: !state.open
       }
-    case constants.CTS_SELECT_TAB: {
+    case SELECT_TAB: {
       const {key} = action.payload
 
       if (!state.hasOwnProperty(key)) {

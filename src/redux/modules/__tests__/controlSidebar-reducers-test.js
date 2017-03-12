@@ -1,12 +1,7 @@
-// Copyright 2017 David Lavieri.  All rights reserved.
-// Use of this source code is governed by a MIT License
-// License that can be found in the LICENSE file.
+import reducer from '../controlSidebar'
 
-jest.unmock('./../reducers')
-
-import reducer, {initialState} from './../reducers'
-
-const initState = {
+const initialState = {
+  hydrated: true,
   open: false,
   wrench: {
     active: true
@@ -23,11 +18,13 @@ describe('Store.ControlSidebar.Reducers', () => {
   it(`should return initialState`, () => {
     expect(
       reducer(undefined, {type: undefined})
-    ).toEqual(initState)
+    ).toEqual(initialState)
   })
 
   it(`should toggle open property to true`, () => {
-    const action = {type: 'CTS_TOGGLE'}
+    const action = {
+      type: 'react-adm-lte-demo/controlSidebar/TOGGLE'
+    }
     const state = {
       ...initialState,
       open: false
@@ -43,7 +40,9 @@ describe('Store.ControlSidebar.Reducers', () => {
   })
 
   it(`should toggle open property to false`, () => {
-    const action = {type: 'CTS_TOGGLE'}
+    const action = {
+      type: 'react-adm-lte-demo/controlSidebar/TOGGLE'
+    }
     const state = {
       ...initialState,
       open: true
@@ -59,7 +58,10 @@ describe('Store.ControlSidebar.Reducers', () => {
   })
 
   it(`should toggle wrench 'active' property to true`, () => {
-    const action = {type: 'CTS_SELECT_TAB', payload: {key: 'wrench'}}
+    const action = {
+      type: 'react-adm-lte-demo/controlSidebar/SELECT_TAB',
+      payload: {key: 'wrench'}
+    }
     const state = {
       ...initialState,
       wrench: {
@@ -81,7 +83,10 @@ describe('Store.ControlSidebar.Reducers', () => {
   })
 
   it(`should toggle wrench.active to false and home.active to true`, () => {
-    const action = {type: 'CTS_SELECT_TAB', payload: {key: 'home'}}
+    const action = {
+      type: 'react-adm-lte-demo/controlSidebar/SELECT_TAB',
+      payload: {key: 'home'}
+    }
     const state = {
       ...initialState,
       wrench: {
@@ -111,7 +116,9 @@ describe('Store.ControlSidebar.Reducers', () => {
   })
 
   it(`should not change state if CTS Tab key does not exist `, () => {
-    const action = {type: 'CTS_SELECT_TAB', payload: {key: 'bleh'}}
+    const action = {
+      type: 'react-adm-lte-demo/controlSidebar/SELECT_TAB', payload: {key: 'bleh'}
+    }
 
     expect(
       reducer(initialState, action)
