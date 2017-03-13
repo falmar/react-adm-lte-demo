@@ -6,6 +6,7 @@ import {Layout} from 'react-adm-lte'
 import MainHeader from './MainHeader/MainHeader'
 import MainSidebar from './../components/MainSidebar'
 import ContentWrapper from './ContentWrapper'
+import MainFooter from './../components/MainFooter'
 import ControlSidebar, {ControlSidebarBackground} from './ControlSidebar'
 
 const MyLayout = props => {
@@ -13,9 +14,8 @@ const MyLayout = props => {
     <Layout {...props}>
       <MainHeader />
       <MainSidebar />
-      <ContentWrapper>
-        Content Goes here!
-      </ContentWrapper>
+      <ContentWrapper>Content Goes here!</ContentWrapper>
+      <MainFooter />
       <ControlSidebar />
       <ControlSidebarBackground />
     </Layout>

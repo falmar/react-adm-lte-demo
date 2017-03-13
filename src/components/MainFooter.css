@@ -1,0 +1,17 @@
+.main-footer {
+  padding: 10px 15px;
+}
+
+.main-footer .copyright-container {
+  display: flex;
+}
+
+.main-footer .copyright-container .copyright {
+  flex: 1 1 auto;
+  align-self: center;
+}
+
+.main-footer .copyright-container .version {
+  text-align: right;
+  flex: 0 1 auto;
+}

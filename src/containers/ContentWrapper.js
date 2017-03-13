@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {PropTypes} from 'react'
 import {ContentWrapper} from 'react-adm-lte'
 
 const {Header, Content} = ContentWrapper
@@ -12,6 +12,10 @@ const ContentWrapperContainer = ({children}) => {
       </Content>
     </ContentWrapper>
   )
+}
+
+ContentWrapperContainer.propTypes = {
+  children: PropTypes.node
 }
 
 export default ContentWrapperContainer
