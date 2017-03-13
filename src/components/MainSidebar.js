@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import {MainSidebarComponents} from 'react-adm-lte'
+import {MainSidebar} from 'react-adm-lte'
 
-const {MainSidebar, UserPanel, SearchForm, Menu, Item} = MainSidebarComponents
+const {UserPanel, SearchForm, Menu, Item} = MainSidebar
 
 const items = [
   {id: '1', parentId: null, title: 'Dashboard', isTreeview: true, iconClass: 'fa fa-dashboard'},

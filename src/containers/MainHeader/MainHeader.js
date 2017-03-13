@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {MainHeaderComponents} from 'react-adm-lte'
+import {MainHeader} from 'react-adm-lte'
 
 import SidebarToggle from './SidebarToggle'
 import ControlSidebarToggle from './ControlSidebarToggle'
@@ -9,10 +9,10 @@ import Notifications from './Notifications'
 import Tasks from './Tasks'
 import User from './User'
 
-const {MainHeader, Logo, LogoText} = MainHeaderComponents
-const {Navbar, NavbarMenu} = MainHeaderComponents
+const {Logo, LogoText} = MainHeader
+const {Navbar, NavbarMenu} = MainHeader
 
-const MySidebar = () => {
+const MainHeaderComponent = () => {
   return (
     <MainHeader>
       <Logo>
@@ -33,4 +33,4 @@ const MySidebar = () => {
   )
 }
 
-export default MySidebar
+export default MainHeaderComponent

@@ -1,11 +1,11 @@
 import React, {PropTypes} from 'react'
 import {connect} from 'react-redux'
-import {MainHeaderComponents} from 'react-adm-lte'
+import {MainHeader} from 'react-adm-lte'
 
 import * as actions from '../../redux/modules/mainHeader'
 
-const {User, UserHeader, UserBody, UserFooter} = MainHeaderComponents
-const {UserBodyItem, UserFooterItem} = MainHeaderComponents
+const {User, UserHeader, UserBody, UserFooter} = MainHeader
+const {UserBodyItem, UserFooterItem} = MainHeader
 
 const MyUser = ({open, onToggle}) => {
   const toggle = () => onToggle(!open)

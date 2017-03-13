@@ -1,9 +1,9 @@
 import {connect} from 'react-redux'
-import {MainHeaderComponents} from 'react-adm-lte'
+import {MainHeader} from 'react-adm-lte'
 
 import * as layoutActions from '../../redux/modules/layout'
 
-const {SidebarToggle} = MainHeaderComponents
+const {SidebarToggle} = MainHeader
 
 const mapDispatchToProps = dispatch => ({
   onToggle: () => dispatch(layoutActions.collapse())

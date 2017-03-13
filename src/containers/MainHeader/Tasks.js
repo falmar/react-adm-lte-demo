@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react'
 import {connect} from 'react-redux'
-import {MainHeaderComponents} from 'react-adm-lte'
+import {MainHeader} from 'react-adm-lte'
 
 import * as actions from '../../redux/modules/mainHeader'
 
-const {Tasks, TaskItem} = MainHeaderComponents
+const {Tasks, TaskItem} = MainHeader
 
 const items = [{
   id: 1,

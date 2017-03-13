@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react'
 import {connect} from 'react-redux'
-import {ControlSidebarComponents} from 'react-adm-lte'
+import {ControlSidebar} from 'react-adm-lte'
 
 import * as actions from '../redux/modules/controlSidebar'
 
-const {ControlSidebar, ControlSidebarBackground, NavTab, Tab} = ControlSidebarComponents
+const {ControlSidebarBackground, NavTab, Tab} = ControlSidebar
 
 const MyControlSidebar = props => {
   const {open, onClickTab} = props
