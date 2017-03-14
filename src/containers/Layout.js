@@ -5,7 +5,7 @@ import {Layout} from 'react-adm-lte'
 
 import MainHeader from './MainHeader/MainHeader'
 import MainSidebar from './../components/MainSidebar'
-import ContentWrapper from './ContentWrapper'
+import ContentWrapper from '../components/ContentWrapper'
 import MainFooter from './../components/MainFooter'
 import ControlSidebar, {ControlSidebarBackground} from './ControlSidebar'
 
