@@ -21,7 +21,7 @@ const MainFooterComponent = () => (
       <div className='version'>
         <b>
           <a target='_blank' href='https://github.com/falmar/react-adm-lte'>ReactAdmLTE</a>
-        </b> v0.0.7 &nbsp;
+        </b> v0.0.8 &nbsp;
         <br />
         <b>
           <a target='_blank' href='https://github.com/almasaeed2010/AdminLTE'>AdminLTE</a>
