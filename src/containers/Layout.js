@@ -9,12 +9,12 @@ import ContentWrapper from '../components/ContentWrapper'
 import MainFooter from './../components/MainFooter'
 import ControlSidebar, {ControlSidebarBackground} from './ControlSidebar'
 
-const MyLayout = props => {
+const LayoutContainer = props => {
   return (
     <Layout {...props}>
       <MainHeader />
       <MainSidebar />
-      <ContentWrapper>Content Goes here!</ContentWrapper>
+      <ContentWrapper />
       <MainFooter />
       <ControlSidebar />
       <ControlSidebarBackground />
@@ -36,4 +36,4 @@ const mapStateToProps = ({layout}) => {
   }
 }
 
-export default connect(mapStateToProps)(MyLayout)
+export default connect(mapStateToProps)(LayoutContainer)
