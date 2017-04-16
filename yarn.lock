@@ -4383,9 +4383,9 @@ react-addons-test-utils@^15.4.2:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
-react-adm-lte@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/react-adm-lte/-/react-adm-lte-0.0.6.tgz#5860c2ade69f12d959d7c085a010d81e8a202a11"
+react-adm-lte@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/react-adm-lte/-/react-adm-lte-0.0.8.tgz#2d15365115dcd4638a0ad6a99ce0ad7350c0f94f"
   dependencies:
     classnames "^2.2.5"
 
