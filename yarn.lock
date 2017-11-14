@@ -47,7 +47,7 @@ acorn@^5.0.0, acorn@^5.0.1:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.0.3.tgz#c460df08491463f028ccb82eab3730bf01087b3d"
 
-admin-lte@^2.3.11:
+admin-lte@~2.3.11:
   version "2.3.11"
   resolved "https://registry.yarnpkg.com/admin-lte/-/admin-lte-2.3.11.tgz#da56dcd34d42e9ef1af362be15520a053a9d43db"
 
@@ -4629,9 +4629,9 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-adm-lte@0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/react-adm-lte/-/react-adm-lte-0.0.8.tgz#2d15365115dcd4638a0ad6a99ce0ad7350c0f94f"
+react-adm-lte@0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/react-adm-lte/-/react-adm-lte-0.0.10.tgz#fc80f1f1a2a4d25e6e7734772a7927fae1b738a2"
   dependencies:
     classnames "^2.2.5"
 
