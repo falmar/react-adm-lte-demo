@@ -4,6 +4,7 @@ import {MainSidebar} from 'react-adm-lte'
 const {UserPanel, SearchForm, Menu, Item} = MainSidebar
 
 const items = [
+  {id: '0', parentId: null, title: 'MAIN NAVIGATION', header: true},
   {id: '1', parentId: null, title: 'Dashboard', isTreeview: true, iconClass: 'fa fa-dashboard'},
   {id: '1-1', parentId: '1', title: 'Dashboard v1'},
   {id: '1-2', parentId: '1', title: 'Dashboard v2'},

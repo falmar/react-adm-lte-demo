@@ -1,21 +1,19 @@
-import React, {PropTypes} from 'react'
+import React from 'react'
 import {ContentWrapper} from 'react-adm-lte'
 
 const {Header, Content} = ContentWrapper
 
-const ContentWrapperContainer = ({children}) => {
+import Index1 from '../pages/Index1'
+
+const ContentWrapperContainer = () => {
   return (
     <ContentWrapper>
-      <Header title='Dashboard' subTitle='Version 2.0' />
+      <Header title='Dashboard' subTitle='Control panel' />
       <Content>
-        {children}
+        <Index1 />
       </Content>
     </ContentWrapper>
   )
-}
-
-ContentWrapperContainer.propTypes = {
-  children: PropTypes.node
 }
 
 export default ContentWrapperContainer
