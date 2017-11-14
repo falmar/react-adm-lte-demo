@@ -27,15 +27,15 @@
     "classnames": "^2.2.5",
     "moment": "^2.18.1",
     "react": "^15.5.4",
-    "react-adm-lte": "0.0.8",
+    "react-adm-lte": "0.0.10",
     "react-dom": "^15.5.4",
     "react-redux": "^4.4.6",
     "redux": "^3.6.0",
     "redux-logger": "^2.8.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "admin-lte": "~2.3.11"
   },
   "devDependencies": {
-    "admin-lte": "^2.3.11",
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.23.1",
     "babel-jest": "^19.0.0",
